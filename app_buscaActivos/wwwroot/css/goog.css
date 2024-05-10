@@ -56,3 +56,8 @@ body {
 .resultados {
     color: #1b2f31;
 }
+.regresarBTN {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
