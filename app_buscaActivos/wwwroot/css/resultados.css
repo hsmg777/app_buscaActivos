@@ -1,11 +1,11 @@
 ﻿@font-face {
-    font-family: 'Circulito'; /* Nombre de la fuente personalizada */
+    font-family: 'Circulito'; 
     src: url('../fonts/circular-std-medium-500.ttf') format('truetype');
 }
 
 body {
     color: white;
-    margin: 20px; /* Ajusta el margen según sea necesario */
+    margin: 20px; 
     font-family: Circulito;
     height: 100%;
     display: flex;
@@ -14,9 +14,9 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    grid-gap: 20px; /* Espacio entre elementos */
-    justify-content: center; /* Centra el grid horizontalmente */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 20px; 
+    justify-content: center;
 }
 
 .subdomain-item {
@@ -25,5 +25,5 @@ body {
 }
 
 .regresarBTN {
-    margin-top: auto; /* Coloca el botón al final de la página */
+    margin-top: auto; 
 }
