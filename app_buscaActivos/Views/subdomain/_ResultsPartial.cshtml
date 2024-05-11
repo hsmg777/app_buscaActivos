@@ -1,0 +1,39 @@
+﻿@model app_buscaActivos.Models.Subdominios
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultados de Subdominios</title>
+    <link rel="stylesheet" type="text/css" href="~/css/resultados.css">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+            grid-gap: 20px; /* Espacio entre elementos */
+        }
+
+        .subdomain-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        @foreach (var subdomain in Model.subdomains)
+        {
+            <div class="subdomain-item">
+                <strong>Subdominio:</strong> @subdomain.subdomain <br />
+                <strong>IP:</strong> @subdomain.ip <br />
+              
+            </div>
+        }
+    </div>
+    <div class="regresarBTN">
+        <a href="../" class="bn62">Regresar</a>
+    </div>
+
+</body>
+</html>

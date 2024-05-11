@@ -15,16 +15,7 @@ body {
     height: 100vh;
     position: relative;
 }
-.ima {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-}
-.ima img{
-    height:80px;
-    width:80px;
-}
 
 .bn62 {
     color: #1b2f31;
