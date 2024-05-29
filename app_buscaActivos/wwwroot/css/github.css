@@ -3,7 +3,6 @@
     src: url('../fonts/circular-std-medium-500.ttf') format('truetype');
 }
 
-
 body {
     background-color: #1cc49d;
     margin: 0;
@@ -55,7 +54,10 @@ body {
 
 .resultados {
     color: white;
+    width: 80%;
 }
+
+
 .regresarBTN {
     position: absolute;
     bottom: 10px;

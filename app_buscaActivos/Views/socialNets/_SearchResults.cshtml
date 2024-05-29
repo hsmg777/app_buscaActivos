@@ -1,0 +1,126 @@
+﻿@model app_buscaActivos.Models.socialNet.Rootobject
+<head>
+    <link rel="stylesheet" type="text/css" href="" />
+</head>
+<div class="resultados-grid">
+    @if (Model.data != null)
+    {
+        <div>
+            <h4>Facebook</h4>
+            @if (Model.data.facebook.Length > 0)
+            {
+                <ul>
+                    @foreach (var item in Model.data.facebook)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No se encontraron resultados</p>
+            }
+        </div>
+        <div>
+            <h4>Instagram</h4>
+            @if (Model.data.instagram.Length > 0)
+            {
+                <ul>
+                    @foreach (var item in Model.data.instagram)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No se encontraron resultados</p>
+            }
+        </div>
+        <div>
+            <h4>Linked In</h4>
+            @if (Model.data.linkedin.Length > 0)
+            {
+                <ul>
+                    @foreach (var item in Model.data.linkedin)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No se encontraron resultados</p>
+            }
+        </div>
+        <div>
+            <h4>GitHub</h4>
+            @if (Model.data.github.Length > 0)
+            {
+                <ul>
+                    @foreach (var item in Model.data.github)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No se encontraron resultados</p>
+            }
+        </div>
+        <div>
+            <h4>Twitter</h4>
+            @if (Model.data.twitter.Length > 0)
+            {
+                <ul>
+                    @foreach (var item in Model.data.twitter)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No se encontraron resultados</p>
+            }
+        </div>
+        <div>
+            <h4>Youtube</h4>
+            @if (Model.data.youtube.Length > 0)
+            {
+                <ul>
+                    @foreach (var item in Model.data.youtube)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No se encontraron resultados</p>
+            }
+        </div>
+        <div>
+            <h4>TikTok</h4>
+            @if (Model.data.tiktok.Length > 0)
+            {
+                <ul>
+                    @foreach (var item in Model.data.tiktok)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No se encontraron resultados</p>
+            }
+        </div>
+
+    }
+    else
+    {
+        <p>No se encontraron resultados</p>
+    }
+</div>

@@ -1,0 +1,27 @@
+﻿.resultados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 80px; /* Ajustar el espacio entre columnas */
+    margin-top: 30%; /* Agregar margen superior del 20% */
+}
+
+    .resultados-grid div {
+        background-color: #1b2f31;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 20px; /* Agregar margen inferior para separar las filas */
+    }
+
+    .resultados-grid h4 {
+        color: #1cc49d;
+        font-size: large;
+    }
+
+    .resultados-grid ul {
+        list-style-type: none;
+        padding: 0px;
+    }
+
+    .resultados-grid li {
+        color: white;
+    }
