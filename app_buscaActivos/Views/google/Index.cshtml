@@ -1,28 +1,50 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewData["Title"] = "BuscaActivos en Google";
+}
+
+<!DOCTYPE html>
 <html>
 <head>
-    <title>BuscaActiv en Google</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" type="text/css" href="/css/goog.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-
     <div class="titulo">
         <h1>BuscaActivos en Google</h1>
     </div>
     <div class="cuerpo">
-        <h3>Ingrese el dominio a buscar:</h3>
-        <input />
+        <h3>Ingrese la info a buscar:</h3>
+        <input type="text" id="searchQuery" />
         <div class="boton">
-            <a class="bn62"> Buscar </a>
+            <button class="bn62" id="searchButton">Buscar</button>
         </div>
     </div>
     <div class="resultados">
         <h3>Resultados:</h3>
-        <ul id="listaResultados"></ul>
+        <div id="searchResults"></div>
     </div>
     <div class="regresarBTN">
-        <a href="../" class="bn62"> Regresar </a>
+        <a href="../" class="bn62">Regresar</a>
     </div>
-   
+
+    <script>
+        $(document).ready(function () {
+            $('#searchButton').click(function () {
+                var query = $('#searchQuery').val();
+                $.ajax({
+                    url: '@Url.Action("Search", "Google")',
+                    type: 'POST',
+                    data: { query: query },
+                    success: function (data) {
+                        $('#searchResults').html(data);
+                    },
+                    error: function () {
+                        alert('Error al realizar la búsqueda');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
